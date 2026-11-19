@@ -4,42 +4,69 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viral Game Hub</title>
-<meta name="description" content="Viral Game Hub: many games behind one icon. No ads, ever.">
+<meta name="description" content="Viral Game Hub: a million games behind one icon. No ads, ever.">
+<meta property="og:image" content="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/main/media/hub/brand/store/feature_graphic_1024x500.png">
+<link rel="icon" href="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/main/media/hub/brand/store/play_icon_512.png">
 <style>
-body{margin:0;font-family:system-ui,sans-serif;background:#0d0d14;color:#eee;line-height:1.6}
-main{max-width:720px;margin:auto;padding:48px 20px}
-h1{font-size:2.4rem;margin:0 0 8px}
-.tag{color:#7cf;font-weight:600}
-section{margin-top:40px}
-a{color:#7cf}
-footer{margin-top:60px;font-size:.85rem;color:#999}
+:root{--red:#ff2d55;--cyan:#22d3ee;--bg:#07060c}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;color:#eee;background:var(--bg) url(https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/main/media/hub/brand/hub_bg_landscape.jpg) center/cover fixed}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(#07060ccc,#07060cf2);z-index:-1}
+a{color:var(--cyan)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--red),#b5179e);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 0 18px #ff2d5588}
+.btn.alt{background:transparent;border:1px solid var(--cyan);color:var(--cyan);box-shadow:0 0 14px #22d3ee44}
+footer{text-align:center;color:#999;font-size:.85rem;padding:40px 16px}
+.hero{position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:24px 16px 40px;background:url(https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/main/media/hub/brand/store/feature_graphic_1024x500.png) center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--bg))}
+.hero>*{position:relative;z-index:1}
+.hero p{font-size:1.25rem;font-weight:600;margin:0 0 18px;text-shadow:0 2px 8px #000}
+.row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+main{max-width:1100px;margin:auto;padding:0 16px}
+h2{font-size:1.5rem;margin:48px 0 14px}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.cat{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;display:block;color:#fff;text-decoration:none;border:1px solid #ffffff22}
+.cat img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.cat:hover img{transform:scale(1.06)}
+.cat span{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(transparent,#000c);font-weight:700}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.feat div{background:#ffffff0d;border:1px solid #ffffff1a;border-radius:14px;padding:16px}
+.feat b{color:var(--cyan)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px;line-height:1.6}
+@media(max-width:700px){.about{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<section class="hero">
+<p data-en="A million games behind one icon. No ads, ever." data-es="Un millón de juegos detrás de un ícono. Sin publicidad, nunca."></p>
+<div class="row">
+<a class="btn" href="games.html" data-en="Browse COUNT games" data-es="Ver los COUNT juegos"></a>
+<a class="btn alt" href="#" id="lang">ES</a>
+</div>
+</section>
 <main>
-<h1>Viral Game Hub</h1>
-<p class="tag">A million games behind one icon. No ads, ever.</p>
-
-<p><a href="games.html"><b>Browse all games → / Ver todos los juegos →</b></a></p>
-
-<section>
-<h2>About</h2>
-<p>Viral Game Hub is a mobile game collection for Android, developed by Viral in Tucumán, Argentina. One app, many games: puzzles, arcade, adventure and multiplayer. Play with friends, climb leaderboards, and never see an ad.</p>
-</section>
-
-<section lang="es">
-<h2>Acerca de</h2>
-<p>Viral Game Hub es una colección de juegos para Android, desarrollada por Viral en Tucumán, Argentina. Una app, muchos juegos: puzzles, arcade, aventura y multijugador. Jugá con amigos, subí en los rankings y nunca veas una publicidad.</p>
-</section>
-
-<section>
-<h2>Contact / Contacto</h2>
-<p><a href="mailto:viralgamingservice@gmail.com">viralgamingservice@gmail.com</a></p>
-</section>
-
-<footer>
-<a href="privacy.html">Privacy Policy / Política de privacidad</a> · © 2026 Viral Game Hub
-</footer>
+<h2 data-en="Categories" data-es="Categorías"></h2>
+<div class="cats" id="cats"></div>
+<h2 data-en="Why Viral" data-es="Por qué Viral"></h2>
+<div class="feat">
+<div><b data-en="No ads. Ever." data-es="Sin publicidad. Nunca."></b><p data-en="No banners, no videos, no trackers." data-es="Sin banners, sin videos, sin rastreadores."></p></div>
+<div><b data-en="One app, every game" data-es="Una app, todos los juegos"></b><p data-en="Games download on demand, so the app stays small." data-es="Los juegos se descargan al jugar, la app queda liviana."></p></div>
+<div><b data-en="Play together" data-es="Jugá con amigos"></b><p data-en="Online rooms, friends and leaderboards." data-es="Salas online, amigos y rankings."></p></div>
+<div><b data-en="English & Español" data-es="Español e inglés"></b><p data-en="Every game in both languages." data-es="Cada juego en los dos idiomas."></p></div>
+</div>
+<h2 data-en="About" data-es="Acerca de"></h2>
+<div class="about"><p data-en="Viral Game Hub is a mobile game collection for Android, developed by Viral in Tucumán, Argentina." data-es="Viral Game Hub es una colección de juegos para Android, desarrollada por Viral en Tucumán, Argentina."></p>
+<p><span data-en="Contact:" data-es="Contacto:"></span> <a href="mailto:viralgamingservice@gmail.com">viralgamingservice@gmail.com</a></p></div>
 </main>
+<footer><a href="privacy.html" data-en="Privacy Policy" data-es="Política de privacidad"></a> · © 2026 Viral Game Hub</footer>
+<script>
+const C=[["puzzle","Puzzle & Board","Puzzles y tablero","🧩",33],["intelligence","Intelligence","Inteligencia","🧠",16],["cards","Cards","Cartas","🃏",16],["word","Word","Palabras","🔤",9],["arcade","Arcade","Arcade","🕹️",27],["adventure","Adventure","Aventura","🗡️",11],["dice","Dice","Dados","🎲",8],["party","Party","Fiesta","🎉",9]],R="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/main/media/hub/";
+const N=C.reduce((a,c)=>a+c[4],0);
+let es=/^es/i.test(navigator.language);
+function draw(){document.documentElement.lang=es?"es":"en";
+document.querySelectorAll("[data-en]").forEach(e=>e.textContent=e.dataset[es?"es":"en"].replace("COUNT",N));
+document.getElementById("lang").textContent=es?"EN":"ES";
+document.getElementById("cats").innerHTML=C.map(c=>"<a class='cat' href='games.html#"+c[0]+"'><img loading='lazy' alt='' src='"+R+"categories/"+c[0]+".jpg'><span>"+c[3]+" "+(es?c[2]:c[1])+" · "+c[4]+"</span></a>").join("")}
+document.getElementById("lang").onclick=e=>{e.preventDefault();es=!es;draw()};draw();
+</script>
 </body>
 </html>
