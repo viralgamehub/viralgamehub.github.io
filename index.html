@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Viral Game Hub</title>
-<meta name="description" content="Viral Game Hub: a million games behind one icon. No ads, ever.">
+<title>Viral Gaming Hub · 100+ games, one icon, no ads</title>
+<meta name="description" content="Viral Gaming Hub: 100+ games behind one icon for Android. Puzzles, cards, board games, arcade and originals like Ink Ninja. No ads, ever.">
+<link rel="canonical" href="https://viralgamehub.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Viral Gaming Hub">
+<meta property="og:title" content="Viral Gaming Hub · 100+ games, one icon, no ads">
+<meta property="og:description" content="Puzzles, cards, board games, arcade and originals like Ink Ninja. No ads, ever. Hecho en Tucumán.">
+<meta property="og:url" content="https://viralgamehub.github.io/">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/store/feature_graphic_1024x500.png">
 <link rel="icon" href="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/store/play_icon_512.png">
 <style>
@@ -31,6 +38,9 @@ h2{font-size:1.5rem;margin:48px 0 14px}
 .feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
 .feat div{background:#ffffff0d;border:1px solid #ffffff1a;border-radius:14px;padding:16px}
 .feat b{color:var(--cyan)}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.vids iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px}
+.social{display:flex;gap:10px;flex-wrap:wrap}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:24px;line-height:1.6}
 @media(max-width:700px){.about{grid-template-columns:1fr}}
 </style>
@@ -53,11 +63,23 @@ h2{font-size:1.5rem;margin:48px 0 14px}
 <div><b data-en="Play together" data-es="Jugá con amigos"></b><p data-en="Online rooms, friends and leaderboards." data-es="Salas online, amigos y rankings."></p></div>
 <div><b data-en="English & Español" data-es="Español e inglés"></b><p data-en="Every game in both languages." data-es="Cada juego en los dos idiomas."></p></div>
 </div>
+<h2 data-en="Watch the trailers" data-es="Mirá los trailers"></h2>
+<div class="vids">
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/2ZtbSd6Rhz4" title="Welcome to Viral Gaming Hub" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/b4ZcmbJS5D4" title="Ink Ninja · Launch Trailer" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Rxg5cprqCF0" title="Bridgemaster · Official Intro" allowfullscreen></iframe>
+</div>
+<h2 data-en="Follow us" data-es="Seguinos"></h2>
+<div class="social">
+<a class="btn alt" href="https://www.youtube.com/channel/UCUrycMp9n6P1jziOT8vgpNA" target="_blank" rel="noopener">▶ YouTube</a>
+<a class="btn alt" href="https://www.facebook.com/viralgaminghubapp" target="_blank" rel="noopener">f Facebook</a>
+<a class="btn alt" href="https://www.instagram.com/viralgaminghubapp/" target="_blank" rel="noopener">◎ Instagram</a>
+</div>
 <h2 data-en="About" data-es="Acerca de"></h2>
-<div class="about"><p data-en="Viral Game Hub is a mobile game collection for Android, developed by Viral in Tucumán, Argentina." data-es="Viral Game Hub es una colección de juegos para Android, desarrollada por Viral en Tucumán, Argentina."></p>
+<div class="about"><p data-en="Viral Gaming Hub is a mobile game collection for Android, developed by Viral in Tucumán, Argentina." data-es="Viral Gaming Hub es una colección de juegos para Android, desarrollada por Viral en Tucumán, Argentina."></p>
 <p><span data-en="Contact:" data-es="Contacto:"></span> <a href="mailto:viralgamingservice@gmail.com">viralgamingservice@gmail.com</a></p></div>
 </main>
-<footer><a href="privacy.html" data-en="Privacy Policy" data-es="Política de privacidad"></a> · <a href="terms.html" data-en="Terms of Service" data-es="Términos de servicio"></a> · © 2026 Viral Game Hub</footer>
+<footer><a href="privacy.html" data-en="Privacy Policy" data-es="Política de privacidad"></a> · <a href="terms.html" data-en="Terms of Service" data-es="Términos de servicio"></a> · © 2026 Viral Gaming Hub</footer>
 <script>
 const C=[["puzzle","Puzzle & Board","Puzzles y tablero","🧩",33],["intelligence","Intelligence","Inteligencia","🧠",16],["cards","Cards","Cartas","🃏",16],["word","Word","Palabras","🔤",9],["arcade","Arcade","Arcade","🕹️",27],["adventure","Adventure","Aventura","🗡️",11],["dice","Dice","Dados","🎲",8],["party","Party","Fiesta","🎉",9]],R="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/";
 const N=C.reduce((a,c)=>a+c[4],0);
