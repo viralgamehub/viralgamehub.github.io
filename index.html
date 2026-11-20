@@ -12,18 +12,18 @@
 <meta property="og:description" content="Puzzles, cards, board games, arcade and originals like Ink Ninja. No ads, ever. Hecho en Tucumán.">
 <meta property="og:url" content="https://viralgamehub.github.io/">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/store/feature_graphic_1024x500.png">
-<link rel="icon" href="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/store/play_icon_512.png">
+<meta property="og:image" content="https://viralgamehub.github.io/media/feature_graphic_1024x500.png">
+<link rel="icon" href="media/play_icon_512.png">
 <style>
 :root{--red:#ff2d55;--cyan:#22d3ee;--bg:#07060c}
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,sans-serif;color:#eee;background:var(--bg) url(https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/hub_bg_landscape.jpg) center/cover fixed}
+body{margin:0;font-family:system-ui,sans-serif;color:#eee;background:var(--bg) url(media/hub_bg_landscape.jpg) center/cover fixed}
 body:before{content:"";position:fixed;inset:0;background:linear-gradient(#07060ccc,#07060cf2);z-index:-1}
 a{color:var(--cyan)}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--red),#b5179e);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 0 18px #ff2d5588}
 .btn.alt{background:transparent;border:1px solid var(--cyan);color:var(--cyan);box-shadow:0 0 14px #22d3ee44}
 footer{text-align:center;color:#999;font-size:.85rem;padding:40px 16px}
-.hero{position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:24px 16px 40px;background:url(https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/store/feature_graphic_1024x500.png) center/cover}
+.hero{position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:24px 16px 40px;background:url(media/feature_graphic_1024x500.png) center/cover}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--bg))}
 .hero>*{position:relative;z-index:1}
 .hero p{font-size:1.25rem;font-weight:600;margin:0 0 18px;text-shadow:0 2px 8px #000}
@@ -41,13 +41,18 @@ h2{font-size:1.5rem;margin:48px 0 14px}
 .vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .vids iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px}
 .social{display:flex;gap:10px;flex-wrap:wrap}
+form.contact{display:grid;gap:10px;max-width:560px}
+form.contact input,form.contact select,form.contact textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff2a;background:#ffffff0d;color:#eee;font:inherit}
+form.contact textarea{min-height:130px;resize:vertical}
+form.contact button{justify-self:start;border:0;cursor:pointer;font:inherit}
+.hp{display:none}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:24px;line-height:1.6}
 @media(max-width:700px){.about{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <section class="hero">
-<p data-en="A million games behind one icon. No ads, ever." data-es="Un millón de juegos detrás de un ícono. Sin publicidad, nunca."></p>
+<p data-en="100+ games behind one icon. No ads, ever." data-es="Más de 100 juegos detrás de un ícono. Sin publicidad, nunca."></p>
 <div class="row">
 <a class="btn" href="games.html" data-en="Browse COUNT games" data-es="Ver los COUNT juegos"></a>
 <a class="btn alt" href="#" id="lang">ES</a>
@@ -75,6 +80,18 @@ h2{font-size:1.5rem;margin:48px 0 14px}
 <a class="btn alt" href="https://www.facebook.com/viralgaminghubapp" target="_blank" rel="noopener">f Facebook</a>
 <a class="btn alt" href="https://www.instagram.com/viralgaminghubapp/" target="_blank" rel="noopener">◎ Instagram</a>
 </div>
+<h2 id="contact" data-en="Contact us" data-es="Contactanos"></h2>
+<form class="contact" action="https://formsubmit.co/viralgamingservice@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New message from viralgamehub.github.io">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://viralgamehub.github.io/thanks.html">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+<input name="name" required maxlength="80" data-ph-en="Your name" data-ph-es="Tu nombre">
+<input type="email" name="email" required maxlength="120" data-ph-en="Your email" data-ph-es="Tu email">
+<select name="topic"><option data-en="Question" data-es="Consulta" value="Question"></option><option data-en="Bug report" data-es="Reportar un error" value="Bug report"></option><option data-en="Game idea" data-es="Idea de juego" value="Game idea"></option><option data-en="Account / data deletion" data-es="Cuenta / borrar datos" value="Account / data"></option><option data-en="Business / press" data-es="Negocios / prensa" value="Business / press"></option></select>
+<textarea name="message" required maxlength="3000" data-ph-en="Your message" data-ph-es="Tu mensaje"></textarea>
+<button class="btn" type="submit" data-en="Send" data-es="Enviar"></button>
+</form>
 <h2 data-en="About" data-es="Acerca de"></h2>
 <div class="about"><p data-en="Viral Gaming Hub is a mobile game collection for Android, developed by Viral in Tucumán, Argentina." data-es="Viral Gaming Hub es una colección de juegos para Android, desarrollada por Viral en Tucumán, Argentina."></p>
 <p><span data-en="Contact:" data-es="Contacto:"></span> <a href="mailto:viralgamingservice@gmail.com">viralgamingservice@gmail.com</a></p></div>
@@ -87,7 +104,8 @@ let es=/^es/i.test(navigator.language);
 function draw(){document.documentElement.lang=es?"es":"en";
 document.querySelectorAll("[data-en]").forEach(e=>e.textContent=e.dataset[es?"es":"en"].replace("COUNT",N));
 document.getElementById("lang").textContent=es?"EN":"ES";
-document.getElementById("cats").innerHTML=C.map(c=>"<a class='cat' href='games.html#"+c[0]+"'><img loading='lazy' alt='' src='"+R+"categories/"+c[0]+".jpg'><span>"+c[3]+" "+(es?c[2]:c[1])+" · "+c[4]+"</span></a>").join("")}
+document.querySelectorAll("[data-ph-en]").forEach(e=>e.placeholder=e.dataset[es?"phEs":"phEn"]);
+document.getElementById("cats").innerHTML=C.map(c=>"<a class='cat' href='games.html#"+c[0]+"'><img loading='lazy' alt='' src='"+"media/"+c[0]+".jpg'><span>"+c[3]+" "+(es?c[2]:c[1])+" · "+c[4]+"</span></a>").join("")}
 document.getElementById("lang").onclick=e=>{e.preventDefault();es=!es;draw()};draw();
 </script>
 </body>

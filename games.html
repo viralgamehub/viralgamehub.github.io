@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Games - Viral Game Hub</title>
-<meta name="description" content="Every game in Viral Game Hub. No ads, ever.">
-<link rel="icon" href="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/store/play_icon_512.png">
+<title>Games - Viral Gaming Hub</title>
+<meta name="description" content="Every game in Viral Gaming Hub. No ads, ever.">
+<link rel="icon" href="media/play_icon_512.png">
 <style>
 :root{--red:#ff2d55;--cyan:#22d3ee;--bg:#07060c}
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,sans-serif;color:#eee;background:var(--bg) url(https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/hub_bg_landscape.jpg) center/cover fixed}
+body{margin:0;font-family:system-ui,sans-serif;color:#eee;background:var(--bg) url(media/hub_bg_landscape.jpg) center/cover fixed}
 body:before{content:"";position:fixed;inset:0;background:linear-gradient(#07060ccc,#07060cf2);z-index:-1}
 a{color:var(--cyan)}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--red),#b5179e);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 0 18px #ff2d5588}
@@ -38,7 +38,7 @@ main{max-width:1200px;margin:auto;padding:16px}
 </head>
 <body>
 <header>
-<div class="top"><a href="index.html"><img src="https://raw.githubusercontent.com/voodoo-nicolas/voodoo-game-hub/master/media/hub/brand/hub_wordmark.png" alt="Viral Game Hub"></a><span id="count"></span><button id="lang">ES</button></div>
+<div class="top"><a href="index.html"><img src="media/hub_wordmark.png" alt="Viral Gaming Hub"></a><span id="count"></span><button id="lang">ES</button></div>
 <div class="row"><input id="q" type="search" placeholder="Search games"></div>
 <div class="row" id="cats"></div>
 </header>
@@ -59,7 +59,7 @@ function draw(){
  let tot=0,h="";
  D.forEach((c,ci)=>{if(cat>=0&&ci!==cat)return;
   const gs=c.g.filter(g=>!q||(g.t+" "+g.te).toLowerCase().includes(q));if(!gs.length)return;tot+=gs.length;
-  h+="<div class='ban' id='"+c.k+"' style=\"background-image:url('"+R+"categories/"+c.k+".jpg')\"><h2>"+c.ic+" "+(es?c.ne:c.n)+"</h2></div><div class='grid'>";
+  h+="<div class='ban' id='"+c.k+"' style=\"background-image:url('"+"media/"+c.k+".jpg')\"><h2>"+c.ic+" "+(es?c.ne:c.n)+"</h2></div><div class='grid'>";
   gs.forEach(g=>{const tag=/online/.test(g.m)?L.on:(/local/.test(g.m)?L.mp:"");
    h+="<div class='card'>"+(g.a?"<img loading='lazy' alt='' src='"+R+"game_art/"+g.id+"/hero.webp' onerror=\"this.outerHTML='<div class=ph>"+g.i+"</div>'\">":"<div class='ph'>"+g.i+"</div>")+"<p>"+(es?g.te:g.t)+(tag?"<small>"+tag+"</small>":"")+"</p></div>"});
   h+="</div>"});

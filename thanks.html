@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thanks - Viral Gaming Hub</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="media/play_icon_512.png">
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;font-family:system-ui,sans-serif;color:#eee;background:#07060c url(media/hub_bg_landscape.jpg) center/cover fixed}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(#07060ccc,#07060cf2);z-index:-1}
+.box{padding:24px;max-width:480px}
+h1{font-size:2rem;margin:0 0 12px}
+p{line-height:1.6;color:#ccc}
+.btn{display:inline-block;margin-top:18px;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,#ff2d55,#b5179e);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 0 18px #ff2d5588}
+</style>
+</head>
+<body>
+<div class="box">
+<h1 data-en="Message sent ✓" data-es="Mensaje enviado ✓"></h1>
+<p data-en="Thanks for writing to Viral Gaming Hub. We usually reply within 48 hours." data-es="Gracias por escribir a Viral Gaming Hub. Solemos responder dentro de las 48 horas."></p>
+<a class="btn" href="index.html" data-en="Back to the hub" data-es="Volver al hub"></a>
+</div>
+<script>
+const es=/^es/i.test(navigator.language);
+document.documentElement.lang=es?"es":"en";
+document.querySelectorAll("[data-en]").forEach(e=>e.textContent=e.dataset[es?"es":"en"]);
+</script>
+</body>
+</html>
